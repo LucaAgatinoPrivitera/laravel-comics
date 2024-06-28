@@ -10,10 +10,13 @@
 </head>
 
 <body>
+    @include('partials.header')
+
     <h1>Ciao prova</h1>
     <div>
         <a href="/">Funziona con /</a>
         <a href="/home">Funziona con /home</a>
+        <a href="/nomeFileNascosto">Funziona con /home</a>
         <hr>
         <h1>Milestone 2</h1>
 
