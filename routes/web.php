@@ -36,3 +36,15 @@ Route::get('home', function () {
 
     return view('welcome', $data);
 });
+
+Route::get('nomeFileNascosto', function () {
+    // Milestone 2 richiede un file a parte
+    // $data = [
+    //     "msg" => "Ciao questo è un messaggio dell'array \$data",
+    //     "titolo" => "The Boys",
+    //     "autore" => "Garth Ennis"
+    // ];
+    $data = config("store");
+
+    return view('about', $data);
+});
