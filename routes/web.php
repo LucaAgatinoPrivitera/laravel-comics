@@ -14,21 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-        "msg" => "Ciao questo è un messaggio dell'array \$data",
-        "titolo" => "The Boys",
-        "autore" => "Garth Ennis"
-    ];
+    // Milestone 2 richiede un file a parte
+    // $data = [
+    //     "msg" => "Ciao questo è un messaggio dell'array \$data",
+    //     "titolo" => "The Boys",
+    //     "autore" => "Garth Ennis"
+    // ];
+    $data = config("store");
 
     return view('welcome', $data);
 });
 
 Route::get('home', function () {
-    $data = [
-        "msg" => "Ciao questo è un messaggio dell'array \$data",
-        "titolo" => "The Boys",
-        "autore" => "Garth Ennis"
-    ];
+    // Milestone 2 richiede un file a parte
+    // $data = [
+    //     "msg" => "Ciao questo è un messaggio dell'array \$data",
+    //     "titolo" => "The Boys",
+    //     "autore" => "Garth Ennis"
+    // ];
+    $data = config("store");
 
     return view('welcome', $data);
 });

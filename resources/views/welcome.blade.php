@@ -16,9 +16,19 @@
         <a href="/home">Funziona con /home</a>
         <hr>
         <h1>Milestone 2</h1>
-        <h2>{{ $msg }}</h2>
-        <h2>Titolo: {{ $titolo }}</h2>
-        <h3>Autore: {{ $autore }}</h3>
+
+        <div class="container_card">
+            @foreach ($fumetti as $fumetto)
+                <div class="card">
+                    <h1>Titolo: {{ $fumetto['titolo'] }}</h1>
+                    <h2>{{ $fumetto['descrizione'] }}</h2>
+                    <h3>Autore: {{ $fumetto['autore'] }}</h3>
+                </div>
+            @endforeach
+
+        </div>
+
+
     </div>
 
 </body>
