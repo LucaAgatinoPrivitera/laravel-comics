@@ -14,9 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        "msg" => "Ciao questo è un messaggio dell'array \$data",
+        "titolo" => "The Boys",
+        "autore" => "Garth Ennis"
+    ];
+
+    return view('welcome', $data);
 });
 
 Route::get('home', function () {
-    return view('welcome');
+    $data = [
+        "msg" => "Ciao questo è un messaggio dell'array \$data",
+        "titolo" => "The Boys",
+        "autore" => "Garth Ennis"
+    ];
+
+    return view('welcome', $data);
 });
