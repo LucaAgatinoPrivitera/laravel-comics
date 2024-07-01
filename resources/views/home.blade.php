@@ -22,11 +22,12 @@
     <h1>ciao</h1>
     <h2>Benvenuto nella home page</h2>
     <div class="container_card">
-        @foreach ($fumetti as $fumetto)
+        @foreach ($fumetti as $key => $fumetto)
             <div class="card">
                 <h1>Titolo: {{ $fumetto['titolo'] }}</h1>
                 <h2>{{ $fumetto['descrizione'] }}</h2>
                 <h3>Autore: {{ $fumetto['autore'] }}</h3>
+                <a href="/home/{{ $key }}">Cliccami per avere la pagina dedicata</a>
             </div>
         @endforeach
 

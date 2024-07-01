@@ -49,3 +49,15 @@ Route::get('nomeFileNascosto', function () {
 
     return view('about', $data);
 })->name("nomeFileNascosto");
+
+Route::get('comicSingolo', function () {
+    // Milestone 2 richiede un file a parte
+    // $data = [
+    //     "msg" => "Ciao questo è un messaggio dell'array \$data",
+    //     "titolo" => "The Boys",
+    //     "autore" => "Garth Ennis"
+    // ];
+    $data = config("store");
+
+    return view('comic', $data);
+})->name("comicSingolo");
