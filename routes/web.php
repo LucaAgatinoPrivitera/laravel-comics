@@ -61,3 +61,18 @@ Route::get('comicSingolo', function () {
 
     return view('comic', $data);
 })->name("comicSingolo");
+
+
+
+Route::get('/home/{indice}', function($key) {
+
+    $fumetti = config("store.fumetti"); // .fumetti ???
+    
+    $data = [
+        "fumetto" => $fumetti[$key] //EXTRA: controllare se $indice è un valore valido
+    ];
+
+    return view('comicSingolo', $data);
+})->name("comics-details");
+
+// Da chiedere, quindi io qui creo un altra ruote, che prende da home e aggiunge l'indice... ma ora che lo guardo quell'indice da dove viene preso? io ho key ma funziona comunque... tornando a noi tra function metto key così mi prende la key della pagina che ho realizzato mettendo "@foreach ($fumetti as $key => $fumetto)" grazie al key =>.
