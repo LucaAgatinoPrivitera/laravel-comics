@@ -51,7 +51,7 @@ Ora provate a usare Route::currentRouteName() per evidenziare la voce di menu at
 
 BONUS 1
 Se volete potete provare a creare una rotta per la pagina di dettaglio del fumetto.
-Dalla rotta dovrete controllare che l'indice fornito sia un valore valido. Alcuni spunti sono intval o array_key_exists, ma ci sono tanti metodi validi. Provate una logica del tipo if(controlliOk) { return view... } else { abort(404) } :occhiolino:
+Dalla rotta dovrete controllare che l'indice fornito sia un valore valido. Alcuni spunti sono intval o array_key_exists, ma ci sono tanti metodi validi. Provate una logica del tipo if(controlliOk) { return view... } else { abort(404) }
 Se eseguite questo bonus trovate il modo poi di linkare a questa pagina non così <a href="/comics/{{ $indice }}"> ma usando il metodo giusto.
 
 BONUS 2

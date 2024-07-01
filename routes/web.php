@@ -22,8 +22,9 @@ Route::get('/', function () {
     // ];
     $data = config("store");
 
-    return view('welcome', $data);
-});
+    return view('home', $data);
+})->name("home");
+// Grazie al name posso assegnare un nome che rimane uguale sempre, se un giorno dovessi modificare la riga del return, non dovrei modificare poi niente in pagina, perché sarebbe sempre accessibile da <a href="{{ route("home") }}">HOME</a>
 
 Route::get('home', function () {
     // Milestone 2 richiede un file a parte
@@ -34,8 +35,8 @@ Route::get('home', function () {
     // ];
     $data = config("store");
 
-    return view('welcome', $data);
-});
+    return view('home', $data);
+})->name("home");
 
 Route::get('nomeFileNascosto', function () {
     // Milestone 2 richiede un file a parte
@@ -47,4 +48,4 @@ Route::get('nomeFileNascosto', function () {
     $data = config("store");
 
     return view('about', $data);
-});
+})->name("nomeFileNascosto");

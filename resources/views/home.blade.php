@@ -12,27 +12,31 @@
 
 {{-- <body> --}}
 
-    {{-- Questi commenti sono per ricordare il codice precedente, praticamente quando uso un layout non ho più codice in pagina se non extends e section --}}
-    
-    @extends('layouts.mioLayout')
+{{-- Questi commenti sono per ricordare il codice precedente, praticamente quando uso un layout non ho più codice in pagina se non extends e section
+    Con un partial ho un blocco che non può mutare, rimane sempre uguale. Ma con un layout io posso dirgli di cambiare i suoi valori --}}
 
-    @section('content')
-        <h1>ciao</h1>
-        <h2>Benvenuto nella home page</h2>
-        <div class="container_card">
-            @foreach ($fumetti as $fumetto)
-                <div class="card">
-                    <h1>Titolo: {{ $fumetto['titolo'] }}</h1>
-                    <h2>{{ $fumetto['descrizione'] }}</h2>
-                    <h3>Autore: {{ $fumetto['autore'] }}</h3>
-                </div>
-            @endforeach
-
-        </div>
-    @endsection
+@extends('layouts.layout')
 
 
-    {{-- <h1>Ciao prova</h1>
+@section('content')
+    <h1>ciao</h1>
+    <h2>Benvenuto nella home page</h2>
+    <div class="container_card">
+        @foreach ($fumetti as $fumetto)
+            <div class="card">
+                <h1>Titolo: {{ $fumetto['titolo'] }}</h1>
+                <h2>{{ $fumetto['descrizione'] }}</h2>
+                <h3>Autore: {{ $fumetto['autore'] }}</h3>
+            </div>
+        @endforeach
+
+    </div>
+
+    <p>Attualmente sei in: {{ Route::currentRouteName() }}</p>
+@endsection
+
+
+{{-- <h1>Ciao prova</h1>
     <div>
         <a href="/">Funziona con /</a>
         <a href="/home">Funziona con /home</a>
@@ -52,8 +56,8 @@
         </div> --}}
 
 
-    {{-- </div> --}}
+{{-- </div> --}}
 
-{{-- </body> --}} 
+{{-- </body> --}}
 
 {{-- </html> --}}
