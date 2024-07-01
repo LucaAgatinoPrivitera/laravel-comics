@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,9 +8,12 @@
     <title>laravel-comics</title>
     <link rel="stylesheet" href="/style.css">
     {{-- Da chiedere perché /? --}}
-</head>
+{{-- </head> --}}
 
-<body>
+{{-- <body> --}}
+
+    {{-- Questi commenti sono per ricordare il codice precedente, praticamente quando uso un layout non ho più codice in pagina se non extends e section --}}
+    
     @extends('layouts.mioLayout')
 
     @section('content')
@@ -28,11 +31,12 @@
         </div>
     @endsection
 
-    <h1>Ciao prova</h1>
+
+    {{-- <h1>Ciao prova</h1>
     <div>
         <a href="/">Funziona con /</a>
         <a href="/home">Funziona con /home</a>
-        <a href="/nomeFileNascosto">Funziona con /home</a>
+        <a href="/nomeFileNascosto">Funziona con /about</a>
         <hr>
         <h1>Milestone 2</h1>
 
@@ -48,8 +52,8 @@
         </div> --}}
 
 
-    </div>
+    {{-- </div> --}}
 
-</body>
+{{-- </body> --}} 
 
-</html>
+{{-- </html> --}}
